@@ -34,9 +34,9 @@ setmsg(event.target.value)
     reader.readAsArrayBuffer(file);
   }
   function send(){
-    debugger
+   
     setstatus(true)
-    axios.post("http://localhost:5000/sendemail",{msg:msg,emailList:emailList})
+    axios.post("http://localhost:5000/",{msg:msg,emailList:emailList})
     .then(function(data){
       
  if(data.data=true){
